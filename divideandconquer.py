@@ -9,6 +9,15 @@ Input: [2, 4, 1, 3, 5]
 Output: 3
 Explanation: The inversions are (2, 1), (4, 1), and (4, 3)
 '''
+# MERGE SORT NOTES:
+'''
+Two functions, merge_sort and merge. merge_sort
+function recursivley divided the array into two halves until base case is reached (arr len 1)
+we then merge two halves together using the merge function. 
+The merge function takes two sorted arrays and merges them into a single sorted array.
+
+'''
+
 
 def find_inversions(arr):
     def merge_sort(arr):
@@ -39,6 +48,7 @@ def find_inversions(arr):
         return res, inversion_count
     _, inversions = merge_sort(arr) # disregard merged array, we only need that for merge sort function
     return inversions # return final inversion count 
+
 
 res1 = find_inversions([2, 4, 1, 3, 5])
 print(res1) # Output: 3
